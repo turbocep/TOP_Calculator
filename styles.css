@@ -16,6 +16,10 @@
   width: 187px;
 }
 
+.screen p {
+  text-align: end;
+}
+
 h1 {
   text-align: center;
 }
