@@ -34,6 +34,13 @@ function updateDisplay(displayValue) {
   document.querySelector(".screen p").textContent = displayValue;
 }
 
+function clearVars() {
+  operand1 = "";
+  operator = "";
+  operand2 = "";
+  displayValue = "";
+}
+
 
 
 //Variables:
@@ -65,7 +72,11 @@ containerRef.addEventListener("click", e => {
   }
   //Check what key was pressed.
   const clickedKey = e.target.textContent;
-  console.log(clickedKey);
+  if (clickedKey == "C") {
+    console.log(`${operand1}, ${operator}, ${operand2}, ${displayValue}`);
+    clearVars();
+    console.log(`${operand1}, ${operator}, ${operand2}, ${displayValue}`);
+  }
 })
 
 console.log(containerRef);
