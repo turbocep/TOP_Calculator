@@ -63,6 +63,9 @@ containerRef.addEventListener("click", e => {
   if (!isButton) {
     return;
   }
+  //Check what key was pressed.
+  const clickedKey = e.target.textContent;
+  console.log(clickedKey);
 })
 
 console.log(containerRef);
