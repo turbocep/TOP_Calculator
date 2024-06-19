@@ -70,13 +70,16 @@ containerRef.addEventListener("click", e => {
   if (!isButton) {
     return;
   }
-  //Check what key was pressed.
+  //Check what key is pressed.
   const clickedKey = e.target.textContent;
+  const entryKeys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+/-"];
   if (clickedKey == "C") {
-    console.log(`${operand1}, ${operator}, ${operand2}, ${displayValue}`);
     clearVars();
-    console.log(`${operand1}, ${operator}, ${operand2}, ${displayValue}`);
   }
+  //Check if an entry key is pressed. 
+  if (entryKeys.includes(clickedKey)) {
+    console.log("valid");
+  }
+
 })
 
-console.log(containerRef);
