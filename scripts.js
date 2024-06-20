@@ -85,7 +85,7 @@ containerRef.addEventListener("click", e => {
     } else if (operand1 == "-") {
       operand1 = "";
       updateDisplay(operand1);
-    } else if (operand1 && operator && !operand2) {
+    } else if (operator) {
       operand2 += "-";
       updateDisplay(operand2);
     } else if (operand2 == "-") {
