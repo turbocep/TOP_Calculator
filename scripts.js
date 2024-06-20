@@ -132,6 +132,19 @@ containerRef.addEventListener("click", e => {
       operand1 = result;
       operand2 = "";
     }
+  } else if (["%"].includes(clickedKey)) {
+    if (operand1 && !operator) {
+      operand1 /= 100;
+      updateDisplay(operand1);
+    }
+  } else if (["."].includes(clickedKey)) {
+    if (!operator && !operand1.includes(".")) {
+      operand1 += ".";
+      updateDisplay(operand1);
+    } else if (operator && !operand2.includes(".")) {
+      operand2 += ".";
+      updateDisplay(operand2);
+    }
   }
 
 })
