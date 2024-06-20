@@ -82,17 +82,17 @@ containerRef.addEventListener("click", e => {
     if (!operand1) {
       operand1 += "-";
       updateDisplay(operand1);
-    } else if (operand1 == "-") {
-      operand1 = "";
-      updateDisplay(operand1);
     } else if (operator) {
       operand2 += "-";
       updateDisplay(operand2);
+    } else if (operand1 == "-") {
+      operand1 = "";
+      updateDisplay(operand1);
     } else if (operand2 == "-") {
       operand2 = "";
       updateDisplay(operand2);
     }
-  } 
+  }
   //Check if number key is pressed.
   //I know this nesting is nowhere near optimal. I'll try to improve it later.
   else if (entryKeys.includes(clickedKey)) {
