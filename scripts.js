@@ -77,20 +77,26 @@ containerRef.addEventListener("click", e => {
     updateDisplay("");
   }
   //Intuitively, it seems simpler and less-repetitive to check what variables are empty before checking what they contain. I'll fix later.
-  //TODO(turbocep): Finish all possible entries for minus sign.
   else if (clickedKey == "+/-") {
     if (!operand1) {
       operand1 += "-";
       updateDisplay(operand1);
     } else if (operator) {
-      operand2 += "-";
+      if (!operand2) {
+        operand2 = "-";
+      } else if (operand2 == "-") {
+        operand2 = "";
+      } else {
+        operand2 = -operand2;
+      }
       updateDisplay(operand2);
-    } else if (operand1 == "-") {
-      operand1 = "";
-      updateDisplay(operand1);
-    } else if (operand2 == "-") {
-      operand2 = "";
-      updateDisplay(operand2);
+    } else if (operand1) {
+        if (operand1 == "-") {
+          operand1 = "";
+        } else {
+          operand1 = -operand1;
+        }
+        updateDisplay(operand1);
     }
   }
   //Check if number key is pressed.
