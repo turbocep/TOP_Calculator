@@ -14,6 +14,7 @@
   border: 2px solid black;
   height: 32px;
   width: 187px;
+  background-color: bisque;
 }
 
 .screen p {
@@ -37,6 +38,7 @@ h1 {
   gap: 5px;
   justify-content: center;
   padding: 6px;
+  background-color: rgb(16, 32, 182);
 }
 
 .button {
@@ -77,4 +79,18 @@ h1 {
 
 .highlighted {
   background-color: orange;
+}
+
+.button-color-1 {
+  background-color: red;
+  color: white;
+}
+
+.button-color-2 {
+  background-color: blue;
+  color: white;
+}
+
+.button-color-3 {
+  background-color: aqua;
 }

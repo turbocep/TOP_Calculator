@@ -116,12 +116,11 @@ containerRef.addEventListener("click", e => {
       operator = clickedKey;
       //Add highlight feature to operator buttons. 
     } else if (operand2) {
-      operator = clickedKey;
-      console.log(`${operand1} ${operator} ${operand2}`)
       const result = operate(operand1, operator, operand2);
       updateDisplay(result);
       operand1 = result;
       operand2 = "";
+      operator = clickedKey;
     }
     
   } else if (["="].includes(clickedKey)) {
